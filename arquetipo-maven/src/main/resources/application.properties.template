@@ -1,0 +1,25 @@
+# Plantilla de configuración base para microservicios SmartLogix
+# Copiar como application.properties y ajustar los valores
+
+# Puerto del microservicio (cada uno usa un puerto diferente)
+# ms-inventario: 8081
+# ms-pedidos:    8082
+# bff:           8080
+server.port=808X
+
+# Conexión a PostgreSQL
+# Crear la base de datos antes de arrancar el microservicio:
+#   CREATE DATABASE nombre_db;
+spring.datasource.url=jdbc:postgresql://localhost:5432/nombre_db
+spring.datasource.username=postgres
+spring.datasource.password=${DB_PASSWORD}
+spring.datasource.driver-class-name=org.postgresql.Driver
+
+# JPA / Hibernate
+# update: crea o actualiza las tablas automáticamente según las entidades
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+
+# Nombre de la aplicación
+spring.application.name=nombre-microservicio

@@ -1,0 +1,11 @@
+SmartLogix — Repositorios GitHub
+Sección 2 — DSY1106 Desarrollo Fullstack III
+
+Repositorio principal (índice):
+https://github.com/cristobal-duoc/smartlogix
+
+Repositorios individuales por componente:
+https://github.com/cristobal-duoc/smartlogix-ms-inventario
+https://github.com/cristobal-duoc/smartlogix-ms-pedidos
+https://github.com/cristobal-duoc/smartlogix-bff
+https://github.com/cristobal-duoc/smartlogix-frontend-web
