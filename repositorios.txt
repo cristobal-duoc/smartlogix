@@ -15,25 +15,30 @@ Repositorios por componente (codigo + pruebas + cobertura + CI)
 
 1. Frontend
    https://github.com/cristobal-duoc/smartlogix-frontend-web
-   Frontend React (Vite). Consume el BFF por API REST. Patron Observer
+   Frontend React (Vite). Entra al backend por el API Gateway (REST). Patron Observer
    (useState/useEffect). Pruebas con Vitest + Testing Library.
    Cobertura de lineas: 100%.
 
-2. Microservicio de Inventario
+2. API Gateway
+   https://github.com/cristobal-duoc/smartlogix-api-gateway
+   Spring Cloud Gateway. Puerta de entrada unica del backend (puerto 8080);
+   enruta las peticiones del frontend hacia el BFF. Pruebas JUnit. Cobertura: 100%.
+
+3. BFF (Backend for Frontend)
+   https://github.com/cristobal-duoc/smartlogix-bff
+   Spring Boot (puerto 8088, detras del Gateway). Circuit Breaker con Resilience4j.
+   Agrega datos de los microservicios y los expone por API REST (Swagger).
+   Pruebas JUnit/Mockito + MockRestServiceServer. Cobertura: 95.6%.
+
+4. Microservicio de Inventario
    https://github.com/cristobal-duoc/smartlogix-ms-inventario
    Spring Boot + JPA + PostgreSQL. Repository Pattern. API REST documentada
    con Swagger (springdoc). Pruebas JUnit/Mockito. Cobertura: 69.8%.
 
-3. Microservicio de Pedidos
+5. Microservicio de Pedidos
    https://github.com/cristobal-duoc/smartlogix-ms-pedidos
    Spring Boot + JPA + PostgreSQL. Factory Method + Repository Pattern.
    API REST con Swagger. Pruebas JUnit/Mockito. Cobertura: 87.7%.
-
-4. BFF (Backend for Frontend)
-   https://github.com/cristobal-duoc/smartlogix-bff
-   Spring Boot. Circuit Breaker con Resilience4j. Agrega datos de los
-   microservicios y los expone al frontend por API REST (Swagger).
-   Pruebas JUnit/Mockito + MockRestServiceServer. Cobertura: 95.6%.
 
 ================================================================
 Calidad y automatizacion (Seccion 3)
