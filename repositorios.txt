@@ -22,7 +22,7 @@ Repositorios por componente (codigo + pruebas + cobertura + CI)
 2. API Gateway
    https://github.com/cristobal-duoc/smartlogix-api-gateway
    Spring Cloud Gateway. Puerta de entrada unica del backend (puerto 8080);
-   enruta las peticiones del frontend hacia el BFF. Pruebas JUnit. Cobertura: 100%.
+   enruta las peticiones del frontend hacia el BFF. Pruebas JUnit. Cobertura: 66.7%.
 
 3. BFF (Backend for Frontend)
    https://github.com/cristobal-duoc/smartlogix-bff
