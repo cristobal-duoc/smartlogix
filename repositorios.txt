@@ -1,5 +1,5 @@
 SmartLogix — Repositorios GitHub
-Seccion 3 — DSY1106 Desarrollo Fullstack III
+Examen Final Transversal (EFT) — DSY1106 Desarrollo Fullstack III
 Estudiante: Cristobal Martinez
 
 ================================================================
@@ -16,8 +16,8 @@ Repositorios por componente (codigo + pruebas + cobertura + CI)
 1. Frontend
    https://github.com/cristobal-duoc/smartlogix-frontend-web
    Frontend React (Vite). Entra al backend por el API Gateway (REST). Patron Observer
-   (useState/useEffect). Pruebas con Vitest + Testing Library.
-   Cobertura de lineas: 100%.
+   (useState/useEffect). Tres paneles: Inventario, Pedidos y Envios, con alta desde la UI.
+   Pruebas con Vitest + Testing Library. Cobertura de lineas: 100%.
 
 2. API Gateway
    https://github.com/cristobal-duoc/smartlogix-api-gateway
@@ -27,8 +27,8 @@ Repositorios por componente (codigo + pruebas + cobertura + CI)
 3. BFF (Backend for Frontend)
    https://github.com/cristobal-duoc/smartlogix-bff
    Spring Boot (puerto 8088, detras del Gateway). Circuit Breaker con Resilience4j.
-   Agrega datos de los microservicios y los expone por API REST (Swagger).
-   Pruebas JUnit/Mockito + MockRestServiceServer. Cobertura: 95.6%.
+   Agrega datos de los tres microservicios y los expone por API REST (Swagger).
+   Pruebas JUnit/Mockito + MockRestServiceServer. Cobertura: 88.6%.
 
 4. Microservicio de Inventario
    https://github.com/cristobal-duoc/smartlogix-ms-inventario
@@ -40,12 +40,24 @@ Repositorios por componente (codigo + pruebas + cobertura + CI)
    Spring Boot + JPA + PostgreSQL. Factory Method + Repository Pattern.
    API REST con Swagger. Pruebas JUnit/Mockito. Cobertura: 87.7%.
 
+6. Microservicio de Envios
+   https://github.com/cristobal-duoc/smartlogix-ms-envios
+   Spring Boot + JPA + PostgreSQL. Coordinacion de Envios (transportista, destino,
+   estado, fecha de entrega estimada). Repository Pattern. API REST con Swagger.
+   Pruebas JUnit/Mockito. Cobertura: 64.7%.
+
 ================================================================
-Calidad y automatizacion (Seccion 3)
+Calidad y automatizacion
 ================================================================
 - Cobertura medida con JaCoCo (backend) y Vitest (frontend); minimo exigido 60%
-  cumplido en los 4 componentes.
+  cumplido en los 6 componentes.
 - Validacion de cobertura y calidad centralizada en SonarCloud
   (organizacion: cristobal-duoc).
 - Integracion Continua con GitHub Actions: cada push ejecuta pruebas,
   valida cobertura y envia el analisis a SonarCloud.
+
+================================================================
+Como levantar el sistema completo
+================================================================
+- Con Docker:   docker compose up --build   ->   http://localhost:3000
+- Sin Docker (solo Java 17):   carpeta RUN_SIN_DOCKER   (ver LEEME.txt).
